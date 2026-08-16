@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pingboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>pingboard</h1>
+        <button id="joinBtn" class="btn-primary">join board</button>
+    </header>
+    <main>
+        <div id="board" class="board"></div>
+    </main>
+
+    <div id="joinModal" class="modal hidden">
+        <div class="modal-box">
+            <h3>Join the board</h3>
+            <input type="text" id="nameInput" placeholder="your name" maxlength="50">
+            <div class="emoji-picker">
+                <span class="emoji-opt" data-emoji="\ud83d\ude00">\ud83d\ude00</span>
+                <span class="emoji-opt" data-emoji="\ud83d\ude0e">\ud83d\ude0e</span>
+                <span class="emoji-opt" data-emoji="\ud83e\uddd1\u200d\ud83d\udcbb">\ud83e\uddd1\u200d\ud83d\udcbb</span>
+                <span class="emoji-opt" data-emoji="\ud83d\ude80">\ud83d\ude80</span>
+                <span class="emoji-opt" data-emoji="\ud83c\udf1f">\ud83c\udf1f</span>
+                <span class="emoji-opt" data-emoji="\ud83d\udc7b">\ud83d\udc7b</span>
+                <span class="emoji-opt selected" data-emoji="\ud83d\udc64">\ud83d\udc64</span>
+            </div>
+            <div class="modal-actions">
+                <button id="cancelJoin" class="btn-ghost">cancel</button>
+                <button id="confirmJoin" class="btn-primary">join</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
